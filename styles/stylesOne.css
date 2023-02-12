@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&family=Mitr&family=Quicksand&family=Sarabun&display=swap');
+
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Sarabun', sans-serif;
+    padding-left: 15px;
+}
+
+/* Head of section CSS */
+.headSection {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.subheadSection {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* myProfile card CSS */
+.profileCard {
+    display: grid;
+    grid-template-rows: 96px 96px 48px 1fr;
+    grid-template-columns: 1fr;
+    border-radius: 20px 20px 16px 16px;
+    background-color: bisque;
+    cursor: pointer;
+    max-width: 348px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.profileCard:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pfBackground {
+    grid-row: 1/3;
+    grid-column: 1/-1;
+}
+
+.pfBackground img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.avatarImage {
+    grid-row: 2/4;
+    grid-column: 1/-1;
+    padding: 0 24px;
+    z-index: 1;
+}
+
+.pfName {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 16px 0px 8px 0px;
+}
+
+.avatarImage img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pfContent {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    padding: 0px 24px 24px 24px;
+}
+
+.profile-contents {
+    text-align: center;
+}
+
+/* myEducation CSS */
+@mixin tablet-and-up {
+    @media screen and (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin mobile-and-up {
+    @media screen and (min-width: 601px) {
+        @content;
+    }
+}
+
+@mixin tablet-and-down {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    padding: 3rem 0;
+}
+
+.wrapper {
+    background: #eaf6ff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.timeline-content {
+    color: #2a2839;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    @include mobile-and-up {
+        font-size: .9rem;
+    }
+
+    @include mobile-only {
+        margin-bottom: .3rem;
+        font-size: 0.85rem;
+    }
+}
+
+.timeyear-content {
+    color: #2a2839;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+    @include mobile-and-up {
+        font-size: .9rem;
+    }
+
+    @include mobile-only {
+        margin-bottom: .3rem;
+        font-size: 0.85rem;
+    }
+}
+
+p {
+    color: #4f4f4f;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+    font-family: 'Sarabun', sans-serif;
+
+    @include mobile-only {
+        font-size: .9rem;
+    }
+}
+
+
+/* mySkills cards CSS */
+.parentCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.childCards {
+    display: grid;
+    place-items: center;
+    padding: 40px;
+    background-color: aquamarine;
+    font-family: 'Sarabun', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .parentCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .parentCards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
